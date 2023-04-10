@@ -96,10 +96,8 @@ Usage Example
     import board
     from displayio_listselect import ListSelect
 
-    # Make the display context. Change size if you want
     display = board.DISPLAY
 
-    # Make the display context
     main_group = displayio.Group()
     display.show(main_group)
 
