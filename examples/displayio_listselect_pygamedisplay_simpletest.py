@@ -9,8 +9,6 @@ Runs on a PC / RasPi in CPython using Blinka_DisplayIO and PyGameDisplay
 import time
 
 import displayio
-import terminalio
-from adafruit_display_text import label
 from blinka_displayio_pygamedisplay import PyGameDisplay
 from displayio_listselect import ListSelect
 
