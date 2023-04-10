@@ -35,12 +35,10 @@ Please ensure all dependencies are available on the CircuitPython filesystem.
 This is easily achieved by downloading
 `the Adafruit library and driver bundle <https://circuitpython.org/libraries>`_
 or individual libraries can be installed using
-`circup <https://github.com/adafruit/circup>`_.Installing from PyPI
-=====================
-.. note:: This library is not available on PyPI yet. Install documentation is included
-   as a standard element. Stay tuned for PyPI availability!
+`circup <https://github.com/adafruit/circup>`_.
 
-.. todo:: Remove the above note if PyPI version is/will be available at time of release.
+Installing from PyPI
+=====================
 
 On supported GNU/Linux systems like the Raspberry Pi, you can install the driver locally `from
 PyPI <https://pypi.org/project/circuitpython-displayio-listselect/>`_.
@@ -91,8 +89,40 @@ Or the following command to update an existing version:
 Usage Example
 =============
 
-.. todo:: Add a quick, simple example. It and other examples should live in the
-examples folder and be included in docs/examples.rst.
+.. code-block:: python
+
+    import time
+    import displayio
+    import board
+    from displayio_listselect import ListSelect
+
+    # Make the display context. Change size if you want
+    display = board.DISPLAY
+
+    # Make the display context
+    main_group = displayio.Group()
+    display.show(main_group)
+
+    items = ["First", "Second", "Third", "Fourth"]
+
+    list_select = ListSelect(scale=2, items=items)
+
+    main_group.append(list_select)
+
+    list_select.anchor_point = (0.5, 0.5)
+    list_select.anchored_position = (display.width // 2, display.height // 2)
+
+    for i in range(3):
+        list_select.move_selection_down()
+        time.sleep(1)
+
+    for i in range(3):
+        list_select.move_selection_up()
+        time.sleep(1)
+
+    list_select.selected_index = 3
+    while True:
+        pass
 
 Documentation
 =============
