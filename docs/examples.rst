@@ -34,3 +34,12 @@ Runs on a PC / RasPi in CPython using Blinka_DisplayIO and PyGameDisplay
 .. literalinclude:: ../examples/displayio_listselect_pygamedisplay_simpletest.py
     :caption: examples/displayio_listselect_pygamedisplay_simpletest.py
     :linenos:
+
+Styles examples
+---------------
+
+Example using community library styles with ListSelect
+
+.. literalinclude:: ../examples/displayio_listselect_simpletest.py
+    :caption: examples/displayio_listselect_simpletest.py
+    :linenos:
