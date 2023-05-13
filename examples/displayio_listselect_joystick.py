@@ -2,7 +2,7 @@
 #
 # SPDX-License-Identifier: MIT
 """
-FunHouse example for ListSelect
+Joystick example for ListSelect
 Make a ListSelect and use up, down, and select buttons to interact with it.
 """
 import time
